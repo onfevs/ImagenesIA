@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA Imagen - Creación de imágenes con Inteligencia Artificial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hover-grow {
+            transition: all 0.3s ease;
+        }
+        .hover-grow:hover {
+            transform: scale(1.05);
+        }
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-20">
+        <div class="container mx-auto px-4" x-data="{showText: false}" x-init="setTimeout(() => showText = true, 500)">
+            <h1 class="text-5xl font-bold mb-6 text-center duration-1000 ease-out" :class="showText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'">IA Imagen</h1>
+            <p class="text-2xl mb-8 text-center transition-all duration-1000 ease-out delay-300" :class="showText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'">Revolucionando la creación de imágenes con Inteligencia Artificial</p>
+            <a href="#" class="bg-white text-purple-600 py-3 px-8 rounded-full font-semibold hover:bg-purple-100 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">Comienza Ahora</a>
+        </div>
+    </header>
+
+    <!-- Quiénes Somos -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center text-gray-800">Quiénes Somos</h2>
+            <div class="flex flex-wrap -mx-4">
+                <div class="w-full md:w-1/2 px-4 mb-8">
+                    <div class="bg-purple-100 p-8 rounded-lg shadow-lg hover-grow">
+                        <h3 class="text-2xl font-semibold mb-4 text-purple-600">Nuestra Misión</h3>
+                        <p class="text-gray-700 leading-relaxed">En IA Imagen, nos dedicamos a impulsar la innovación en la creación de imágenes utilizando las más avanzadas tecnologías de inteligencia artificial. Nuestro objetivo es proporcionar herramientas poderosas y accesibles para artistas, diseñadores y creativos de todo el mundo.</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 px-4 mb-8">
+                    <div class="bg-indigo-100 p-8 rounded-lg shadow-lg hover-grow">
+                        <h3 class="text-2xl font-semibold mb-4 text-indigo-600">Nuestra Visión</h3>
+                        <p class="text-gray-700 leading-relaxed">Imaginamos un futuro donde la creación de imágenes no tenga límites, donde la única barrera sea la imaginación. Trabajamos incansablemente para hacer realidad este futuro, desarrollando tecnologías de IA que amplíen las posibilidades creativas de nuestros usuarios.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clientes -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center text-gray-800">Nuestros Clientes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6 hover-grow">
+                    <div class="w-32 h-32 mx-auto bg-gray-300 rounded-full mb-4 overflow-hidden">
+                        <img src="/api/placeholder/128/128" alt="Cliente 1" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 text-center">Cliente 1</h3>
+                    <p class="text-gray-600 text-center">Empresa líder en diseño gráfico que utiliza nuestras herramientas de IA para potenciar su creatividad.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 hover-grow">
+                    <div class="w-32 h-32 mx-auto bg-gray-300 rounded-full mb-4 overflow-hidden">
+                        <img src="/api/placeholder/128/128" alt="Cliente 2" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 text-center">Cliente 2</h3>
+                    <p class="text-gray-600 text-center">Agencia de publicidad que ha revolucionado sus campañas con nuestras imágenes generadas por IA.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 hover-grow">
+                    <div class="w-32 h-32 mx-auto bg-gray-300 rounded-full mb-4 overflow-hidden">
+                        <img src="/api/placeholder/128/128" alt="Cliente 3" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 text-center">Cliente 3</h3>
+                    <p class="text-gray-600 text-center">Estudio de animación que utiliza nuestra IA para crear conceptos y fondos innovadores.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 hover-grow">
+                    <div class="w-32 h-32 mx-auto bg-gray-300 rounded-full mb-4 overflow-hidden">
+                        <img src="/api/placeholder/128/128" alt="Cliente 4" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 text-center">Cliente 4</h3>
+                    <p class="text-gray-600 text-center">Empresa de e-commerce que mejora sus productos con visualizaciones generadas por IA.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Llamado a la acción para redes sociales -->
+    <section class="py-20 bg-gradient-to-r from-pink-500 to-purple-500 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-8">¡Síguenos en nuestras redes sociales!</h2>
+            <p class="text-xl mb-12">Mantente al día con nuestras últimas novedades y creaciones de IA</p>
+            <div class="flex justify-center space-x-8">
+                <a href="#" class="bg-white text-pink-500 py-3 px-8 rounded-full font-semibold hover:bg-pink-100 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg flex items-center">
+                    <i class="fab fa-tiktok mr-2"></i> Síguenos en TikTok
+                </a>
+                <a href="#" class="bg-white text-purple-500 py-3 px-8 rounded-full font-semibold hover:bg-purple-100 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg flex items-center">
+                    <i class="fab fa-instagram mr-2"></i> Síguenos en Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center text-gray-800">Nuestra Ubicación</h2>
+            <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2d-73.98765!3d40.12345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDA3JzI0LjQiTiA3M8KwNTknMTUuNiJX!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-between items-start">
+                <div class="w-full md:w-1/4 mb-8 md:mb-0">
+                    <h3 class="text-3xl font-bold text-purple-400 mb-4">IA Imagen</h3>
+                    <p class="text-gray-400">Transformando ideas en imágenes con IA</p>
+                </div>
+                <div class="w-full md:w-1/4 mb-8 md:mb-0">
+                    <h4 class="text-xl font-semibold mb-4">Síguenos</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f fa-2x"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter fa-2x"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-tiktok fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/4 mb-8 md:mb-0">
+                    <h4 class="text-xl font-semibold mb-4">Contacto</h4>
+                    <p class="text-gray-400 mb-2"><i class="fas fa-map-marker-alt mr-2"></i> 123 Calle Principal, Ciudad, País</p>
+                    <p class="text-gray-400 mb-2"><i class="fas fa-phone mr-2"></i> +1 234 567 890</p>
+                    <p class="text-gray-400"><i class="fas fa-envelope mr-2"></i> info@iaimagen.com</p>
+                </div>
+                <div class="w-full md:w-1/4">
+                    <p class="text-gray-400">&copy; 2024 IA Imagen. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-button bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1">
+        <span class="whatsapp-text max-w-0 m-2">¡Escribe ahora!</span>
+        <i class="fab fa-whatsapp fa-2x"></i>
+    </a>
+</body>
+</html>
